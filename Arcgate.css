@@ -1,0 +1,693 @@
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fade-in-bottom 0.4s ease-in-out both;
+}
+
+.nav-link {
+    text-transform: uppercase;
+}
+
+/* .animation {
+    animation: fade-in-bottom 1s ease-in-out both;
+    
+    
+}
+.animation:hover {
+    display: block;
+} */
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar {
+    background-color: white !important;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    color: #868572;
+    text-indent: 2em;
+}
+
+.arcgate-logo img {
+    width: 146px;
+    height: 27px;
+    /* background-image: url("https://www.arcgate.com/arcgate-content/arcgate-assets/arcgate/images/arcgate-orange.svg"); */
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    margin: 7px auto;
+}
+
+.header-section {
+    width: 100%;
+    max-width: 1111px;
+    padding: 0px 10px;
+    height: 56px;
+    margin: 0px auto;
+
+}
+
+.navbar {
+    left: 100px;
+}
+
+.section-css {
+    background-image: url("https://www.arcgate.com/arcgate-content/arcgate-assets/arcgate/images/a1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #e85631;
+    padding: 110px 0;
+    background-size: auto 90%;
+    margin: 12px auto 0;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 999px;
+    margin: 0 auto;
+
+
+}
+
+.section-css h2 {
+    color: #fff;
+    width: 90%;
+    line-height: 120%;
+    font-size: 28px;
+    font-weight: 350;
+    text-align: center;
+}
+
+.arcgaterated {
+    background-color: #eff2f1;
+    padding: 32px 0 20px;
+
+}
+
+.arcgaterated p {
+    width: 90%;
+    line-height: normal;
+    font-size: 22px;
+    word-spacing: 0;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.arcgaterat {
+    background-color: #fff;
+    padding: 0px 0 35px;
+
+}
+
+.arcgaterat h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 360;
+    font-size: 36px;
+}
+
+
+.arcgaterat p {
+    font-family: sans-serif;
+    font-size: 22px;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.provide {
+    background: #eeffee7a;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 40px;
+
+}
+
+.provide h1 {
+    font-size: 33px;
+    line-height: normal;
+    padding: 0 20px 40px;
+    font-weight: 400;
+    width: 92%;
+    margin: 0 auto;
+
+}
+
+.nav-image {
+    margin: 10px auto;
+    height: 55px;
+    width: 55px;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    box-shadow: 0 5px 18px 0 rgba(14, 48, 57, .16);
+    border-radius: 50%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-image img {
+    width: 30px;
+}
+
+.dropdown-item {
+    text-transform: uppercase;
+    font-size: 11px;
+    /* border-right: 1px solid #efefef; */
+
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.view-more {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #efefef;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.view-more a {
+    font-weight: 700;
+    color: #47495a;
+    font-size: 12px;
+}
+
+.video {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.video-h1 {
+    text-align: center;
+    font-size: 31px;
+    font-weight: 400;
+}
+
+.card {
+    border: none;
+    border-bottom: 1px solid #00000045;
+    background-color: #eff2f1;
+    margin: 10px;
+    width: 18rem;
+}
+
+.whyarcgaterat {
+    background-color: #f7e848;
+    padding: 50px 0 70px;
+
+}
+
+.whyarcgaterat h2 {
+    margin-bottom: 22px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+
+
+}
+
+.whyarcgaterat p {
+    width: 90%;
+    line-height: normal;
+    font-size: 22px;
+
+}
+
+.whyarcgaterat span {
+    width: 100%;
+    float: left;
+    padding-left: 56px;
+    padding-top: 17px;
+    padding-bottom: 5px;
+}
+
+.why-Display img {
+    width: 162px;
+}
+
+.why-Display {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.dropdown-menu li {
+    width: 30%;
+    /* margin: 1px 50px 24px 19px; */
+}
+
+.wrapper-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.process-img {
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.forAll {
+    max-width: 162px;
+    margin: 0 0 30px;
+}
+
+.img-shap {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 18px 0 rgba(0, 0, 0, .12);
+    /* display: inline-block; */
+    width: 55px;
+    display: flex;
+    height: 72px;
+    max-width: 72px;
+    margin: 10px;
+    padding: 5px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Font-size {
+    line-height: normal;
+    font-size: 17px;
+}
+
+.forAll a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.wrapper1 {
+    width: 100%;
+    max-width: 1073px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-size: 22px;
+    border-radius: 10px;
+    border: 3px solid;
+    font-weight: 500;
+
+}
+
+.Arcgatian {
+    background-color: #86c7be;
+    padding: 64px 0 70px;
+
+
+}
+
+.Arcgatian1 {
+    background-image: url("https://www.arcgate.com/arcgate-content/arcgate-assets/arcgate/images/join-bg.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: -5% 100%;
+    margin-bottom: 47px;
+
+}
+
+.Arcgatian2 {
+    background-image: url("https://www.arcgate.com/arcgate-content/arcgate-assets/arcgate/images/join-bg.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: 105% 0%;
+}
+
+.Arcgatian h2 {
+    margin-bottom: 22px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+}
+
+.center {
+    width: 80%;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.play-btn {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(249, 99, 50, .9);
+    border-radius: 50%;
+}
+
+.play-btn span {
+
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 14px solid #fff;
+    position: relative;
+    margin: 14px auto;
+
+}
+
+/* .play-btn:hover {
+    position: fixed;
+    transform: scale(1.5);
+
+
+
+} */
+
+.dropdown-menu-center {
+    left: 50% !important;
+    right: auto !important;
+    text-align: center;
+    transform: translate(-50%, 0) !important;
+    width: 600px;
+    /* width: max-content; */
+    background-color: #fffbfb;
+}
+
+.Blog {
+    display: flex;
+    margin-bottom: 35px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.desktop-only {
+    background-color: #164ca2;
+    ;
+    color: white;
+    display: block;
+}
+
+.top-strip {
+    /* display: flex;
+    justify-content: space-between;
+    background-color: #164ca2;;
+    color: white; */
+
+    /* border: 0 solid red; */
+    padding: 5px;
+    background-color: #164ca2;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button2 {
+    background-color: #164ca2;
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border: 3px solid #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-family: proximanovasemibold_0, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.top-strip strong {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.top-strip span {
+    padding: 2px;
+    font-weight: 400;
+}
+
+.CAREERS {
+    color: #fff;
+}
+
+.CAREERS:hover {
+    background-color: white;
+    color: #86c7be;
+}
+
+.learn {
+    color: #e85631;
+}
+
+.learn:hover {
+    background-color: #e85631;
+    color: white;
+}
+
+.flow {
+    color: #3953a4;
+}
+
+.flow:hover {
+    background-color: #3953a4;
+    color: white;
+}
+
+.button2:hover {
+    background-color: white;
+    color: black;
+
+}
+
+.close {
+
+    position: absolute;
+    top: 2px;
+    right: 9px;
+    z-index: 1;
+}
+
+.footer li {
+    list-style: none;
+}
+
+
+.footer1 {
+    background-color: #e85631;
+    padding: 31px 0 3px;
+
+}
+
+.arcgate-logo {
+    width: 155px;
+    height: 28px;
+    background-image: url("https://www.arcgate.com/arcgate-content/arcgate-assets/arcgate/images/arcgate-footer.svg");
+    background-size: 100% auto;
+    top: 0;
+    float: left;
+}
+
+.footer1-nav {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.footer-div {
+    margin-left: 50px;
+    color: white;
+    position: relative;
+    font-size: 14px;
+
+
+}
+
+.socialIcon {
+    margin-left: 127px;
+}
+
+.Copyright {
+    margin-left: 64%;
+    font-size: 13px;
+    color: white;
+
+}
+
+.fa {
+    padding: 8px;
+    font-size: 21px;
+    width: 36px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 6px;
+    border-radius: 50%;
+    background-color: white;
+    color: #e85631;
+}
+
+
+#myBtn {
+
+    display: none;
+    position: fixed;
+    bottom: 58px;
+    right: 30px;
+    z-index: 99;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: transparent;
+
+}
+
+#Explore {
+    background-color: #e85631;
+    /* display: block;
+    padding: 14px;
+    position: fixed;
+    z-index: 99; */
+    width: 100%;
+    padding: 16px;
+    display: block;
+    position: fixed;
+    bottom: 0px;
+
+
+}
+
+.footer1-11 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer1-1-button1 {
+    border: none;
+    outline: none;
+    background-color: #e85631;
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 60px;
+}
+
+.footer1-1-button2 {
+    border: none;
+    outline: none;
+    background-color: #e85631;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    padding-right: 114px;
+    margin-top: 5px;
+}
+
+
+#desktop-only3{
+    display: block;
+}
+#desktop-only1 {
+    display: block;
+}
+#desktop-only2 {
+    display: none;
+}
+.top-strip1 {
+    padding: 21px;
+    font-size: 16px;
+    text-align: left;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.close1 {
+    position: absolute;
+    top: 15px;
+    right: 42px;
+    z-index: 1;
+    background-color: black;
+    border-radius: 50px;
+    padding: 7px;
+
+}
+.top-strip1 img{
+    height: 34px;
+}
+
+.header-top{
+
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e5e5e5;
+   
+}
+
+.becomeagian-left{
+
+    width: 70%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+
+}
+
+.becomeagian{
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.becomeagian h1{
+    margin: 10px 0;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 40px;
+}
+
+.becomeagian h2{
+    margin: 0 0 40px;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 28px;
+    line-height: 40px;
+}
