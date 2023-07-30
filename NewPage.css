@@ -1,72 +1,88 @@
-.navbarbackground{
-    background-color: black !important;
+.navbarbackground {
+  background-color: black !important;
 }
-.nav-link{
-    color: white;
+.nav-link {
+  color: white !important;
 }
-
-.navbar-brand img{
-    width: 50%;
+.nav-link:hover {
+  color: white !important;
 }
-
+.navbar-brand img {
+  width: 50%;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 .wrapper {
-    width: 100%;
-    max-width: 1367px;
-    margin: 0 auto;
-
+  width: 100%;
+  max-width: 1367px;
+  margin: 0 auto;
 }
 
 .carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    max-height: 334px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-height: 334px;
+}
+.popular {
+  padding: 0px 0 20px;
+}
+.search {
+  width: 100%;
+  max-width: 911px;
+  margin: 0 auto;
+  padding: 32px 0 20px;
+}
+.search .form-control {
+  border-radius: 50px;
+  background-color: cadetblue;
+  color: white;
+}
+.search .btn {
+  border-radius: 50px;
+  background-color: cadetblue;
+  color: white;
+}
 
-}
-.popular{
-    padding: 0px 0 20px;
-}
-.search{
-    width: 100%;
-    max-width: 911px;
-    margin: 0 auto;
-    padding: 32px 0 20px;
-}
-.search .form-control{
-border-radius: 50px;
-background-color: cadetblue;
-color: white;
-}
-.search .btn{
-    border-radius: 50px;
-    background-color: cadetblue;
-    color: white;
-}
-
-.Trending{
-    padding: 28px 0 20px;
+.Trending {
+  padding: 28px 0 20px;
 }
 .video {
-    width: 100%;
-    max-width: 1232px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  max-width: 1232px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
-.video-h1{
-    width: 100%;
-    max-width: 1232px;
-    margin: 0 auto;
-    font-size: 24px;
-    font-weight: 400;
-
+.video-h1 {
+  width: 100%;
+  max-width: 1232px;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 400;
 }
 .card {
-    border: none;
-    border-bottom: 1px solid #00000045;
-    background-color: #eff2f1;
-    margin: 10px;
-    width: 18rem;
-    transition-duration: 2000ms !important;
-    position: relative;
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid #00000045;
+  background-color: #dfece7;
+  margin: 10px;
+  transition-duration: 2000ms !important;
+  position: relative;
+  border-radius: 11%;
+}
+.card-title {
+  font-size: 15px;
+  text-align: center;
+  width: 154px;
+  margin: 5px auto;
+}
+.card-img-top {
+  max-width: 272px;
+  width: 100%;
+  border-radius: 11%;
+}
+.card-title:hover {
+  color: blue;
 }
