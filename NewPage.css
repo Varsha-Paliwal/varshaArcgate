@@ -2,56 +2,77 @@
   display: flex;
   background-color: black !important;
 }
+
 #SerchPageUrl {
   display: block;
 }
+
+.d-block {
+  margin: 0px auto;
+  width: 266px;
+  margin-top: 27px;
+}
+
 .nav-link {
   color: white !important;
 }
+
 .nav-link:hover {
   color: white !important;
 }
+
 .navbar-brand img {
   width: 50%;
 }
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
 .wrapper {
   width: 100%;
   max-width: 1367px;
   margin: 0 auto;
 }
 
-.carousel-inner {
+/* .carousel-inner {
   position: relative;
   width: 100%;
   overflow: hidden;
   max-height: 334px;
-}
+} */
+
 .popular {
   padding: 0px 0 20px;
 }
+
 .search {
   width: 100%;
   max-width: 911px;
   margin: 0 auto;
   padding: 32px 0 20px;
 }
+
 .search .form-control {
   border-radius: 50px;
   background-color: cadetblue;
   color: white;
 }
+
 .search .btn {
   border-radius: 50px;
   background-color: cadetblue;
   color: white;
 }
 
+#SerchNewspageUrl {
+  display: none;
+}
+
 .Trending {
   padding: 28px 0 20px;
 }
+
 .video {
   width: 100%;
   max-width: 1232px;
@@ -59,6 +80,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .video-h1 {
   width: 100%;
   max-width: 1232px;
@@ -66,7 +88,8 @@
   font-size: 24px;
   font-weight: 400;
 }
-.card {
+
+.cards {
   text-decoration: none;
   border: none;
   border-bottom: 1px solid #00000045;
@@ -76,17 +99,110 @@
   position: relative;
   border-radius: 11%;
 }
+
 .card-title {
   font-size: 15px;
   text-align: center;
   width: 154px;
   margin: 5px auto;
 }
+
 .card-img-top {
-  max-width: 272px;
+  /* max-width: 272px; */
+  max-width: 164px;
   width: 100%;
   border-radius: 11%;
 }
+
 .card-title:hover {
   color: blue;
+}
+
+.d-flesed {
+  width: 100%;
+}
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: max-content;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 58px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  width: 100%;
+  max-width: 1237px;
+  margin: 0 auto;
+
+
+}
+
+#searchResults {
+  margin: 0 auto;
+  padding: 32px 0 20px;
+}
+
+#searchResults h4 {
+  width: 15%;
+  background-color: #01b4e4;
+  color: white;
+  padding: 16px;
+
+}
+
+
+.image-container {
+  position: relative;
+  padding: 20px;
+  display: inline-block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 14%;
+  left: 15%;
+  /* transform: translate(-50%, -50%); */
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* padding: 10px; */
+  right: 0px;
+}
+
+.text-overlay p {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#datausing {
+  padding: 4px
+}
+
+.border {
+  border: none;
 }
