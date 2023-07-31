@@ -1,5 +1,9 @@
 .navbarbackground {
+  display: flex;
   background-color: black !important;
+}
+#SerchPageUrl {
+  display: block;
 }
 .nav-link {
   color: white !important;

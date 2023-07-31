@@ -79,6 +79,13 @@ function setTrendingromAPI() {
 setTrendingromAPI();
 
 function search() {
+  let SerchPageUrl = document.getElementById("SerchPageUrl");
+  SerchPageUrl.style.display = "none";
+
+  //   const SerchPageUrl =
+  //     "file:///C:/Users/MEHUL%20PALIWAL/Desktop/varshaOffice/varshaArcgate/Searchpage.html";
+  //   window.location.href = SerchPageUrl;
+
   const searchInput = document.getElementById("searchInput").value;
   //   const apiUrl = `https://api.themoviedb.org/3/search/keyword?api_key=21d0b61bb21a1374f1b66c994663ada3&query=${encodeURIComponent(
   const apiUrl = ` https://api.themoviedb.org/3/search/movie?api_key=21d0b61bb21a1374f1b66c994663ada3&query=${encodeURIComponent(
