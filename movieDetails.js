@@ -1,41 +1,126 @@
-function showMovieDetails(movieId) {
+function getMovieId(){
+  const urlmovieId = new URLSearchParams(window.location.search);
+  // const movieId = urlmovieId.get("movieId");
+  return urlmovieId.get("movieId");
+  // if (movieId ) {
+  //   showMovieDetails(movieId);
+  // }
+}
+function showMovieDetails() {
+  const movieId = getMovieId();
   fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=21d0b61bb21a1374f1b66c994663ada3`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=21d0b61bb21a1374f1b66c994663ada3&append_to_response=credits,videos`
   )
     .then((response) => response.json())
-    .then((data) => {
-      const movieDetailsContainer = document.getElementById("movieDetails");
+    .then((movie) => {
+      const moviePoster = document.querySelector('.movie-poster img');
+      moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+      moviePoster.alt = movie.title;
 
-      const posterElement = document.createElement("img");
-      posterElement.classList.add("movie-poster");
-      if (data.poster_path != null) {
-        posterElement.src =
-          "https://image.tmdb.org/t/p/w500" + data.poster_path;
+      const movieTitle = document.getElementById('movieTitle');
+      movieTitle.textContent = movie.title;
+
+      const releaseDate = document.getElementById('releaseDate');
+      releaseDate.textContent = `Release Date: ${movie.release_date}`;
+
+      const genres = document.getElementById('genres');
+      genres.textContent = `Genres: ${movie.genres.map((genre) => genre.name).join(', ')}`;
+
+      const runtime = document.getElementById('runtime');
+      runtime.textContent = `Runtime: ${movie.runtime} minutes`;
+
+      const overview = document.getElementById('overview');
+      overview.textContent = `Overview: ${movie.overview}`;
+
+      const director = document.getElementById('director');
+      const directorInfo = movie.credits.crew.find((person) => person.job === 'Director');
+      if (directorInfo) {
+        director.textContent = `Director: ${directorInfo.name}`;
       } else {
-        posterElement.src =
-          "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
-        posterElement.setAttribute("style", "height: 300px");
+        director.textContent = 'Director: Not available';
       }
-      movieDetailsContainer.appendChild(posterElement);
 
-      const titleElement = document.createElement("h1");
-      titleElement.classList.add("movie-title");
-      titleElement.textContent = data.title || data.name;
-      movieDetailsContainer.appendChild(titleElement);
-
-      const overviewElement = document.createElement("p");
-      overviewElement.classList.add("movie-overview");
-      overviewElement.textContent = data.overview;
-      movieDetailsContainer.appendChild(overviewElement);
+      fetchMovieCast(movie.credits.cast);
     })
-    .catch((error) => {
-      console.error("Error fetching movie details from the API:", error);
-    });
+    .catch((err) => console.error(err));
 }
 
-const urlParams = new URLSearchParams(window.location.search);
-const movieId = urlParams.get("movieId");
 
-if (movieId) {
-  showMovieDetails(movieId);
+// function showMovieDetails() {
+//  const movieId= getMovieId()
+//   fetch(
+//     `https://api.themoviedb.org/3/movie/${movieId}?api_key=21d0b61bb21a1374f1b66c994663ada3&append_to_response=credits,videos`
+//   )
+//     .then((response) => response.json())
+// .then((movie) => {
+//   // console.log("movie",movie)
+//   const moviePoster = document.querySelector('.movie-poster img');
+//   moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+
+//   moviePoster.alt = movie.title;
+
+//   const movieTitle = document.getElementById('movieTitle');
+//   movieTitle.textContent = movie.title;
+
+//   const releaseDate = document.getElementById('releaseDate');
+//   releaseDate.textContent = `Release Date: ${movie.release_date}`;
+
+//   const genres = document.getElementById('genres');
+//   genres.textContent = `Genres: ${movie.genres.map(genre => genre.name).join(', ')}`;
+
+//   const runtime = document.getElementById('runtime');
+//   runtime.textContent = `Runtime: ${movie.runtime} minutes`;
+
+
+//   const overview = document.getElementById('overview');
+//   overview.textContent = `Overview: ${movie.overview}`;
+
+//   const director = document.getElementById('director');
+//   const directorInfo = movie.credits.crew.find(person => person.job === 'Director');
+//   if (directorInfo) {
+//     director.textContent = `Director: ${directorInfo.name}`;
+//   } else {
+//     director.textContent = 'Director: Not available';
+//   }
+
+//   fetchMovieCast(movie.credits.cast);
+// })
+// .catch(err => console.error(err));
+// }
+
+
+function fetchMovieCast(cast) {
+  const castList = document.getElementById('castList');
+
+    cast.forEach(actor => {
+      if (!actor.profile_path) {
+          return; 
+      }
+
+    const card = document.createElement('div');
+    card.classList.add('castCard', 'cast-card', 'mb-3');
+
+    const castImage = document.createElement('img');
+    castImage.src = `https://image.tmdb.org/t/p/w200${actor.profile_path}`;
+    castImage.alt = actor.name;
+    castImage.classList.add('cast-image');
+
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('castBody');
+
+  
+    const castName = document.createElement('h6');
+    castName.textContent = actor.name;
+    castName.classList.add('cast-title');
+    cardBody.appendChild(castName);
+
+    card.appendChild(castImage);
+    card.appendChild(cardBody);
+
+    castList.appendChild(card);
+  });
+
 }
+
+showMovieDetails();
+

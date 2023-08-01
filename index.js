@@ -1,3 +1,5 @@
+const apiKey ="21d0b61bb21a1374f1b66c994663ada3";
+
 function setImageFromAPI() {
   let output = document.getElementById("carouselExampleSlidesOnly");
   fetch(
@@ -32,14 +34,14 @@ function setImageFromAPI() {
 setImageFromAPI();
 
 let trendingMoviesLoaded = false;
-
+let currentPage = 1;
 function setTrendingFromAPI() {
   if (!trendingMoviesLoaded) {
-    trendingMoviesLoaded = true; // Set the flag to prevent multiple calls
+    trendingMoviesLoaded = true; 
 
     const output = document.getElementById("trendingMovies");
     fetch(
-      "https://api.themoviedb.org/3/trending/all/day?api_key=21d0b61bb21a1374f1b66c994663ada3"
+      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentPage}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -48,11 +50,12 @@ function setTrendingFromAPI() {
         output.appendChild(carouselInner);
 
         data.results.forEach((dataImg, index) => {
-          fetch(
-            `https://api.themoviedb.org/3/movie/${dataImg.id}?api_key=21d0b61bb21a1374f1b66c994663ada3`
-          )
-            .then((response) => response.json())
-            .then((dataOnePage) => {
+          // fetch(
+          //   `https://api.themoviedb.org/3/movie/${dataImg.id}/credits?api_key=21d0b61bb21a1374f1b66c994663ada3`
+          // )
+          //   .then((response) => response.json())
+          //   .then((dataOnePage) => {
+              // console.log("dataOnePage",dataOnePage)
               const carouselItem = document.createElement("div");
               carouselItem.classList.add("card", "cards");
               carouselItem.setAttribute("data-aos-duration", "10000");
@@ -60,9 +63,9 @@ function setTrendingFromAPI() {
 
               const imageElement = document.createElement("img");
               imageElement.classList.add("card-img-top");
-              if (dataOnePage.poster_path != null) {
+              if (dataImg.poster_path != null) {
                 imageElement.src =
-                  "https://image.tmdb.org/t/p/w500" + dataOnePage.poster_path;
+                  "https://image.tmdb.org/t/p/w500" + dataImg.poster_path;
               } else {
                 imageElement.src =
                   "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
@@ -72,15 +75,15 @@ function setTrendingFromAPI() {
               const titleElement = document.createElement("h5");
               titleElement.setAttribute("type", "button");
               titleElement.classList.add("card-title");
-              titleElement.textContent = dataOnePage.title || dataOnePage.name;
+              titleElement.textContent = dataImg.title || dataImg.name;
 
-              // Store the movieId as a data attribute on the card
-              carouselItem.dataset.movieId = dataOnePage.id;
+              // Store card Id
+              carouselItem.dataset.movieId = dataImg.id;
 
               carouselItem.appendChild(imageElement);
               carouselItem.appendChild(titleElement);
               carouselInner.appendChild(carouselItem);
-            });
+            // });
         });
 
         carouselInner.addEventListener("click", (event) => {
@@ -97,57 +100,27 @@ function setTrendingFromAPI() {
   }
 }
 
+
+// function loadMoreMovie() {
+//   setTrendingFromAPI();
+//   currentPage++;
+// }
+
+// window.addEventListener("scroll", () => {
+//   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+//     loadMoreMovie();
+//   }
+// });
+
+
 document.addEventListener("DOMContentLoaded", () => {
   setTrendingFromAPI();
 });
 
 function openMovieDetailsPage(movieId) {
   const url = `movieDetails.html?movieId=${movieId}`;
-  window.open(url, "_blank");
+  window.open(url, "_self");
 }
-
-setTrendingFromAPI();
-
-function showMovieDetails(movieId) {
-  fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=21d0b61bb21a1374f1b66c994663ada3`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      // Create the movie details page
-      const movieDetailsPage = document.createElement("div");
-      movieDetailsPage.classList.add("movie-details");
-
-      const posterElement = document.createElement("img");
-      posterElement.classList.add("movie-poster");
-      if (data.poster_path != null) {
-        posterElement.src =
-          "https://image.tmdb.org/t/p/w500" + data.poster_path;
-      } else {
-        posterElement.src =
-          "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
-        posterElement.setAttribute("style", "height: 300px");
-      }
-      movieDetailsPage.appendChild(posterElement);
-
-      const titleElement = document.createElement("h1");
-      titleElement.classList.add("movie-title");
-      titleElement.textContent = data.title || data.name;
-      movieDetailsPage.appendChild(titleElement);
-
-      const overviewElement = document.createElement("p");
-      overviewElement.classList.add("movie-overview");
-      overviewElement.textContent = data.overview;
-      movieDetailsPage.appendChild(overviewElement);
-
-      document.body.appendChild(movieDetailsPage);
-    })
-    .catch((error) => {
-      console.error("Error fetching movie details from the API:", error);
-    });
-}
-
-setTrendingFromAPI();
 
 function search() {
   const searchInput = document.getElementById("searchInput").value;
