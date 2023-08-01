@@ -1,0 +1,33 @@
+ 
+  #FormModal{
+    .col-form-label{
+        font-size: 14px;
+      }
+  .form-control {
+    border-style: outset;
+  }
+  
+  .form-control:focus {
+    border-color: #f96332; 
+    box-shadow: 0 0 0 0.05em #f96332;
+  }
+  
+  .btn-primary {
+    background-color: #f96332;
+    border: none;
+  }
+.img-color{
+    background-color: white;
+    
+    
+}
+.img-widht{
+    width: 32px;
+}
+
+}
+  .col-form-label {
+    font-size: 14px;
+  }
+
+ 
