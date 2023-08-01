@@ -35,55 +35,53 @@ setImageFromAPI();
 
 let trendingMoviesLoaded = false;
 let currentPage = 1;
-function setTrendingFromAPI() {
-  if (!trendingMoviesLoaded) {
-    trendingMoviesLoaded = true; 
+let totalPages = 1;
+let isLoading = false;
 
+function setTrendingFromAPI() {
+  if (!trendingMoviesLoaded && !isLoading) {
+    isLoading = true;
     const output = document.getElementById("trendingMovies");
     fetch(
       `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentPage}`
     )
       .then((response) => response.json())
       .then((data) => {
+        if (currentPage === 1) {
+          totalPages = data.total_pages;
+        }
+
         const carouselInner = document.createElement("div");
         carouselInner.classList.add("video");
         output.appendChild(carouselInner);
 
         data.results.forEach((dataImg, index) => {
-          // fetch(
-          //   `https://api.themoviedb.org/3/movie/${dataImg.id}/credits?api_key=21d0b61bb21a1374f1b66c994663ada3`
-          // )
-          //   .then((response) => response.json())
-          //   .then((dataOnePage) => {
-              // console.log("dataOnePage",dataOnePage)
-              const carouselItem = document.createElement("div");
-              carouselItem.classList.add("card", "cards");
-              carouselItem.setAttribute("data-aos-duration", "10000");
-              carouselItem.setAttribute("data-aos", "fade-up");
+          const carouselItem = document.createElement("div");
+          carouselItem.classList.add("card", "cards");
+          carouselItem.setAttribute("data-aos-duration", "10000");
+          carouselItem.setAttribute("data-aos", "fade-up");
 
-              const imageElement = document.createElement("img");
-              imageElement.classList.add("card-img-top");
-              if (dataImg.poster_path != null) {
-                imageElement.src =
-                  "https://image.tmdb.org/t/p/w500" + dataImg.poster_path;
-              } else {
-                imageElement.src =
-                  "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
-                imageElement.setAttribute("style", "height: 397px;");
-              }
+          const imageElement = document.createElement("img");
+          imageElement.classList.add("card-img-top");
+          if (dataImg.poster_path != null) {
+            imageElement.src = "https://image.tmdb.org/t/p/w500" + dataImg.poster_path;
+          } else {
+            imageElement.src =
+              "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
+            imageElement.setAttribute("style", "height: 397px;");
+          }
 
-              const titleElement = document.createElement("h5");
-              titleElement.setAttribute("type", "button");
-              titleElement.classList.add("card-title");
-              titleElement.textContent = dataImg.title || dataImg.name;
+          const titleElement = document.createElement("h5");
+          titleElement.setAttribute("type", "button");
+          titleElement.classList.add("card-title");
+          titleElement.textContent = dataImg.title || dataImg.name;
 
-              // Store card Id
-              carouselItem.dataset.movieId = dataImg.id;
+          // Store card Id
+          carouselItem.dataset.movieId = dataImg.id;
 
-              carouselItem.appendChild(imageElement);
-              carouselItem.appendChild(titleElement);
-              carouselInner.appendChild(carouselItem);
-            // });
+          carouselItem.appendChild(imageElement);
+          carouselItem.appendChild(titleElement);
+          carouselInner.appendChild(carouselItem);
         });
 
         carouselInner.addEventListener("click", (event) => {
@@ -93,24 +91,32 @@ function setTrendingFromAPI() {
             openMovieDetailsPage(movieId);
           }
         });
+
+        isLoading = false;
+
+        if (currentPage < totalPages) {
+          currentPage++;
+        }
       })
       .catch((error) => {
         console.error("Error fetching data from the API:", error);
+        isLoading = false; 
       });
   }
 }
 
+function handleScroll() {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  if (scrollTop + clientHeight >= scrollHeight - 100) {
+   
+    setTrendingFromAPI();
+  }
+}
 
-// function loadMoreMovie() {
-//   setTrendingFromAPI();
-//   currentPage++;
-// }
 
-// window.addEventListener("scroll", () => {
-//   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-//     loadMoreMovie();
-//   }
-// });
+window.addEventListener("scroll", handleScroll);
+
+// setTrendingFromAPI();
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -135,7 +141,8 @@ function search() {
   const carouselInner = searchValue.querySelector(".d-flesed");
 
   const carouselItem = document.querySelector("#searchInputNew");
-  carouselItem.setAttribute("value", searchInput);
+  // carouselItem.setAttribute("value", searchInput);
+  carouselItem.innerHTML =`<div>${searchInput}</div`
   carouselInner.appendChild(carouselItem);
 
   const apiUrlMovie = ` https://api.themoviedb.org/3/search/movie?api_key=21d0b61bb21a1374f1b66c994663ada3&query=${searchInput}`;
