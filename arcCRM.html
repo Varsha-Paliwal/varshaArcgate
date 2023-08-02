@@ -11,57 +11,257 @@
 
 
 <div id="content">
-    <section id ="FormModal">
+    <section id="FormModal">
         <button type="button" class="btn btn-primary img-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <img class="img-widht" src="imageIcon/add.png"/>
-          </button>
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <img class="img-widht" src="imageIcon/add.png" />
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">Add/Update Timesheet</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="mb-3 row">
-                        <label for="inputDescription" class="col-sm-2 col-form-label">Title</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputTitle">
-                        </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add/Update Timesheet</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                      <div class="mb-3 row">
-                          <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputDescription">
-                          </div>
-                      </div>
+                    <div class="modal-body">
+                        <div class="mb-3 row">
+                            <label for="inputDescription" class="col-sm-2 col-form-label">Title</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputTitle">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputDescription">
+                            </div>
+                        </div>
 
-                      <div class="mb-3 row">
-                        <label for="staticExpectedDate" class="col-sm-2 col-form-label">Expected Date</label>
-                        <div class="col-sm-10">
-                            <input type="text"  class="form-control" id="staticExpectedDate" />
+                        <div class="mb-3 row">
+                            <label for="staticExpectedDate" class="col-sm-2 col-form-label">Expected Date</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="staticExpectedDate" />
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="mb-3 row">
-                        <label for="staticPriorityStatus" class="col-sm-2 col-form-label">Priority Status</label>
-                        <div class="col-sm-10">
-                            <input type="text"  class="form-control" id="staticPriorityStatus" />
+                        <div class="mb-3 row">
+                            <label for="staticPriorityStatus" class="col-sm-2 col-form-label">Priority Status</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="staticPriorityStatus" />
+                            </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                 
-                    <button type="button" class="btn btn-primary">Save</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close </button>
-                  </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close </button>
+                    </div>
                 </div>
-              </div>
-          </div>
+            </div>
+        </div>
 
-      
+
     </section>
+
+
+
+    <section id="tabelData">
+
+
+        <div class="table-container">
+
+            <table>
+                <thead class="tabelDataEmp">
+                    <tr class="thHeading">
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Expected Date</th>
+                        <th>Priority Status</th>
+                        <th>Employee Id</th>
+                        <th>Employee Name</th>
+                        <th>change coordinator</th>
+                        <th>Action</th>
+                        <th>If Rejected(Reason)</th>
+                    </tr>
+                </thead>
+                <thead class="tabelDataEmp">
+                    <tr>
+                        <td> Bandwidth Upgrade</td>
+                        <td> Need to upgrade more than 200 MBPS </td>
+                        <td>22-12-2022</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>
+                            <div class="custom-dropdown">
+                                <div class="selected-option">Select an option</div>
+                                <div class="options-container">
+                                    <div class="Option-background">Changggge</div>
+                                    <div class="Option-background">Coordinator</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" value="Alfreds Futterkiste" type="text"
+                                placeholder="Default input" aria-label="default input example">
+                        </td>
+                        <td>
+                            <input class="form-control" value="Maria Anders" type="text" placeholder="Default input"
+                                aria-label="default input example">
+                        </td>
+                    </tr>
+                    <tr class="th-bottom">
+                        <th class="emptyTh"></th>
+                        <th>Change Type</th>
+                        <th>Risk Analysis</th>
+                        <th>Risk Impact</th>
+                        <th>Security Text</th>
+                        <th>Rollback Plan</th>
+                        <th>
+                           
+                                <div class="custom-dropdown">
+                                    <div class="selected-option">Select an option</div>
+                                    <div class="options-container">
+                                        <div class="Option-background">Changggge</div>
+                                        <div class="Option-background">Coordinator</div>
+                                    </div>
+                                </div>
+                          
+                        </th>
+                        <th>Affected Services</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="custom-dropdown">
+                                <div class="selected-option">Select an option</div>
+                                <div class="options-container">
+                                    <div class="Option-background">Changggge</div>
+                                    <div class="Option-background">Coordinator</div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td><input class="form-control" value="Analysis" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                        <td><input class="form-control" value="Impact" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                        <td> <input class="form-control" value="Security" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                        <td> <input class="form-control" value="Rollback" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                            <td>
+                                <div class="custom-dropdown">
+                                    <div class="selected-option">Select an option</div>
+                                    <div class="options-container">
+                                        <div class="Option-background">Changggge</div>
+                                        <div class="Option-background">Coordinator</div>
+                                    </div>
+                                </div>
+                            </td>
+                        <td><input class="form-control" value="Affected" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                        <td>
+                            <button type="button" class="btn btn-light save-button">Save</button>
+                        </td>
+
+
+                    </tr>
+                </thead>
+                <!-- 2nd tabel -->
+                <thead class="tabelDataEmp">
+                    <tr>
+                        <td> Bandwidth Upgrade</td>
+                        <td> Need to upgrade more than 200 MBPS </td>
+                        <td>22-12-2022</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>
+                            <div class="custom-dropdown">
+                                <div class="selected-option">Select an option</div>
+                                <div class="options-container">
+                                    <div class="Option-background">Changggge</div>
+                                    <div class="Option-background">Coordinator</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" value="Alfreds Futterkiste" type="text"
+                                placeholder="Default input" aria-label="default input example">
+                        </td>
+                        <td>
+                            <input class="form-control" value="Maria Anders" type="text" placeholder="Default input"
+                                aria-label="default input example">
+                        </td>
+                    </tr>
+                    <tr class="th-bottom">
+                        <th class="emptyTh"></th>
+                        <th>Change Type</th>
+                        <th>Risk Analysis</th>
+                        <th>Risk Impact</th>
+                        <th>Security Text</th>
+                        <th>Rollback Plan</th>
+                        <th>
+                         
+                                <div class="custom-dropdown">
+                                    <div class="selected-option">Select an option</div>
+                                    <div class="options-container">
+                                        <div class="Option-background">Changggge</div>
+                                        <div class="Option-background">Coordinator</div>
+                                    </div>
+                                </div>
+                           
+                        </th>
+                        <th>Affected Services</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="custom-dropdown">
+                                <div class="selected-option">Select an option</div>
+                                <div class="options-container">
+                                    <div class="Option-background">Changggge</div>
+                                    <div class="Option-background">Coordinator</div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td><input class="form-control" value="Analysis" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                        <td><input class="form-control" value="Impact" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                        <td> <input class="form-control" value="Security" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                        <td> <input class="form-control" value="Rollback" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                            <td>
+                                <div class="custom-dropdown">
+                                    <div class="selected-option">Select an option</div>
+                                    <div class="options-container">
+                                        <div class="Option-background">Changggge</div>
+                                        <div class="Option-background">Coordinator</div>
+                                    </div>
+                                </div>
+                            </td>
+                        <td><input class="form-control" value="Affected" type="text" placeholder="Default input"
+                            aria-label="default input example"></td>
+                        <td>
+                            <button type="button" class="btn btn-light save-button">Save</button>
+                        </td>
+
+
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+
+
+
+    </section>
+</div>
+
 </div>
 
 <body>
