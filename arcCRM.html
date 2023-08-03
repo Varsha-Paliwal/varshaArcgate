@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
     <link rel="stylesheet" href="arcCRM.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
 </head>
 
 
@@ -66,8 +68,6 @@
 
 
     <section id="tabelData">
-
-
         <div class="table-container">
 
             <table>
@@ -94,17 +94,25 @@
                         <td>Germany</td>
                         <td>
                             <div class="custom-dropdown">
-                                <div class="selected-option">Select an option</div>
+                                <div class="selected-option">Select an option <i class="fas fa-chevron-down"></i> </div>
                                 <div class="options-container">
                                     <div class="Option-background">Changggge</div>
                                     <div class="Option-background">Coordinator</div>
                                 </div>
                             </div>
                         </td>
+                       
+
                         <td>
-                            <input class="form-control" value="Alfreds Futterkiste" type="text"
-                                placeholder="Default input" aria-label="default input example">
+                            <div class="custom-dropdown" id="dropdown-container">
+                                <div class="selected-option" id="selected-option">Select an option <i class="fas fa-chevron-down"></i> </div>
+                                <div class="options-container" id="options-container">
+                                    <div class="Option-background" onclick="selectOption('Approve')">Approve</div>
+                                    <div class="Option-background" onclick="selectOption('Reject')">Reject</div>
+                                </div>
+                            </div>
                         </td>
+
                         <td>
                             <input class="form-control" value="Maria Anders" type="text" placeholder="Default input"
                                 aria-label="default input example">
@@ -117,24 +125,14 @@
                         <th>Risk Impact</th>
                         <th>Security Text</th>
                         <th>Rollback Plan</th>
-                        <th>
-                           
-                                <div class="custom-dropdown">
-                                    <div class="selected-option">Select an option</div>
-                                    <div class="options-container">
-                                        <div class="Option-background">Changggge</div>
-                                        <div class="Option-background">Coordinator</div>
-                                    </div>
-                                </div>
-                          
-                        </th>
+                        <th> </th>
                         <th>Affected Services</th>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
                             <div class="custom-dropdown">
-                                <div class="selected-option">Select an option</div>
+                                <div class="selected-option">Select an option <i class="fas fa-chevron-down"></i> </div>
                                 <div class="options-container">
                                     <div class="Option-background">Changggge</div>
                                     <div class="Option-background">Coordinator</div>
@@ -143,31 +141,56 @@
                         </td>
 
                         <td><input class="form-control" value="Analysis" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
+                                aria-label="default input example"></td>
                         <td><input class="form-control" value="Impact" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
+                                aria-label="default input example"></td>
                         <td> <input class="form-control" value="Security" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
+                                aria-label="default input example"></td>
                         <td> <input class="form-control" value="Rollback" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
-                            <td>
-                                <div class="custom-dropdown">
-                                    <div class="selected-option">Select an option</div>
-                                    <div class="options-container">
-                                        <div class="Option-background">Changggge</div>
-                                        <div class="Option-background">Coordinator</div>
-                                    </div>
-                                </div>
-                            </td>
+                                aria-label="default input example"></td>
+                        <td> </td>
                         <td><input class="form-control" value="Affected" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
+                                aria-label="default input example"></td>
                         <td>
                             <button type="button" class="btn btn-light save-button">Save</button>
                         </td>
 
 
                     </tr>
+
+
+                    <tr class="th-bottom">
+                        <th class="emptyTh"></th>
+                        <th>Post Implementation testing</th>
+                        <th>Implemented Comment</th>
+                        <th>Implemented</th>
+                     
+                    </tr>
+
+
+                    <tr>
+                        <td></td>
+
+                        <td><input class="form-control" value="Implementation" type="text" placeholder="Default input"
+                                aria-label="default input example"></td>
+                        <td><input class="form-control" value="Implemented" type="text" placeholder="Default input"
+                                aria-label="default input example"></td>
+                        <td>
+                                <div class="custom-dropdown">
+                                    <div class="selected-option">Select an option  <i class="fas fa-chevron-down"></i> </div>
+                                    <div class="options-container">
+                                        <div class="Option-background">Yes</div>
+                                        <div class="Option-background">No</div>
+                                    </div>
+                                </div>
+                            </td>
+    
+
+
+                    </tr>
                 </thead>
+
+
                 <!-- 2nd tabel -->
                 <thead class="tabelDataEmp">
                     <tr>
@@ -179,7 +202,7 @@
                         <td>Germany</td>
                         <td>
                             <div class="custom-dropdown">
-                                <div class="selected-option">Select an option</div>
+                                <div class="selected-option">Select an option <i class="fas fa-chevron-down"></i> </div>
                                 <div class="options-container">
                                     <div class="Option-background">Changggge</div>
                                     <div class="Option-background">Coordinator</div>
@@ -187,8 +210,13 @@
                             </div>
                         </td>
                         <td>
-                            <input class="form-control" value="Alfreds Futterkiste" type="text"
-                                placeholder="Default input" aria-label="default input example">
+                            <div class="custom-dropdown">
+                                <div class="selected-option">Select an option <i class="fas fa-chevron-down"></i> </div>
+                                <div class="options-container">
+                                    <div class="Option-background">Yes</div>
+                                    <div class="Option-background">No</div>
+                                </div>
+                            </div>
                         </td>
                         <td>
                             <input class="form-control" value="Maria Anders" type="text" placeholder="Default input"
@@ -202,24 +230,14 @@
                         <th>Risk Impact</th>
                         <th>Security Text</th>
                         <th>Rollback Plan</th>
-                        <th>
-                         
-                                <div class="custom-dropdown">
-                                    <div class="selected-option">Select an option</div>
-                                    <div class="options-container">
-                                        <div class="Option-background">Changggge</div>
-                                        <div class="Option-background">Coordinator</div>
-                                    </div>
-                                </div>
-                           
-                        </th>
+                        <th> </th>
                         <th>Affected Services</th>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
                             <div class="custom-dropdown">
-                                <div class="selected-option">Select an option</div>
+                                <div class="selected-option">Select an option <i class="fas fa-chevron-down"></i> </div>
                                 <div class="options-container">
                                     <div class="Option-background">Changggge</div>
                                     <div class="Option-background">Coordinator</div>
@@ -228,38 +246,155 @@
                         </td>
 
                         <td><input class="form-control" value="Analysis" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
+                                aria-label="default input example"></td>
                         <td><input class="form-control" value="Impact" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
+                                aria-label="default input example"></td>
                         <td> <input class="form-control" value="Security" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
+                                aria-label="default input example"></td>
                         <td> <input class="form-control" value="Rollback" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
-                            <td>
-                                <div class="custom-dropdown">
-                                    <div class="selected-option">Select an option</div>
-                                    <div class="options-container">
-                                        <div class="Option-background">Changggge</div>
-                                        <div class="Option-background">Coordinator</div>
-                                    </div>
-                                </div>
-                            </td>
+                                aria-label="default input example"></td>
+                        <td> </td>
                         <td><input class="form-control" value="Affected" type="text" placeholder="Default input"
-                            aria-label="default input example"></td>
+                                aria-label="default input example"></td>
                         <td>
                             <button type="button" class="btn btn-light save-button">Save</button>
                         </td>
 
 
                     </tr>
+
+
+                    <tr class="th-bottom">
+                        <th class="emptyTh"></th>
+                        <th>Post Implementation testing</th>
+                        <th>Implemented Comment</th>
+                        <th>Implemented</th>
+
+                    </tr>
+
+
+                    <tr>
+                        <td></td>
+
+                        <td><input class="form-control" value="Implementation" type="text" placeholder="Default input"
+                                aria-label="default input example"></td>
+                        <td><input class="form-control" value="Implemented" type="text" placeholder="Default input"
+                                aria-label="default input example"></td>
+                        <td>
+                            <div class="custom-dropdown">
+                                <div class="selected-option">Select an option <i class="fas fa-chevron-down"></i> </div>
+                                <div class="options-container">
+                                    <div class="Option-background">Yes</div>
+                                    <div class="Option-background">No</div>
+                                </div>
+                            </div>
+                        </td>
+
+
+
+                    </tr>
                 </thead>
 
+
+
             </table>
+
+
         </div>
 
-
-
     </section>
+
+    <section id="modalSection">
+        <div id ='modalOpen'class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div  class="wrapper">
+                    <div class="infoIcon"> <a><span class="info">i</span></a></div>
+                </div>
+                
+                    <div class="modal-body">
+                       
+                            <label for="exampleFormControlTextarea1" class="form-label">Do you want to change the ticket action</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                         
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary button-accpect" onclick="accpectAndCloseModal('modalOpen')">Yes</button>
+                        <button type="button"  class="btn btn-secondary button-reject" onclick="rejectAndCloseModal('modalOpen')" data-bs-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id ="modalforQuerysection">
+    <div id ='modalforQuery'class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div  class="wrapper">
+                <div class="infoIcon"> <a><span class="info">i</span></a></div>
+            </div>
+            
+                <div class="modal-body">
+                   
+                        <label for="exampleFormControlTextarea1" class="form-label">Do you want to change the ticket action ?</label>
+                       
+                     
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary button-accpect" onclick="selectModal('modalforQuery')">Yes</button>
+                    <button type="button"  class="btn btn-secondary button-reject" onclick="rejectAndCloseModal('modalforQuery')" data-bs-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id ="actionModalsection">
+    <div id ='actionModal'class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div  class="wrapper">
+                <div class="infoIcon boaderColor"> <a><span class="info background">✓</span></a></div>
+            </div>
+            
+                <div class="modal-body">
+                   
+                        <label for="exampleFormControlTextarea1" class="form-label">Action update successfully</label>
+                      
+                     
+                </div>
+                <div class="modal-footer">
+                  <button type="button"  class="btn btn-secondary button-reject" onclick="rejectAndCloseModal('actionModal')" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id ="rejectModalsection">
+    <div id ='rejectModal'class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div  class="wrapper">
+                <div class="infoIcon boaderColor"> <a><span class="info background">X</span></a></div>
+            </div>
+            
+                <div class="modal-body">
+                   
+                        <label for="exampleFormControlTextarea1" class="form-label">Ticket action are not changed</label>
+                      
+                     
+                </div>
+                <div class="modal-footer">
+                      <button type="button"  class="btn btn-secondary button-reject" onclick="rejectAndCloseModal('rejectModal')" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </div>
 
 </div>

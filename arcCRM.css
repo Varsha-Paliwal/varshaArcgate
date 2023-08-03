@@ -1,157 +1,487 @@
- 
-  #FormModal{
-    .col-form-label{
-        font-size: 14px;
-      }
-  .form-control {
-    border-style: outset;
-  }
+ #FormModal {
+   .col-form-label {
+     font-size: 14px;
+   }
+
+   .form-control {
+     border-style: outset;
+   }
+
+   .form-control:focus {
+
+     border-color: #ccc;
+     box-shadow: 0 0 0 0.05em #ccc;
+   }
+
+   .btn-primary {
+     background-color: #f96332;
+     border: none;
+   }
+
+   .img-color {
+     background-color: white;
+
+   }
+
+   .img-widht {
+     width: 32px;
+   }
+
+ }
+
+
+
+ #tabelData {
+  width: 80%;
+  margin: 0px auto;
+
+
+   .form-control {
+     border-style: outset;
+     font-size: 10px;
+     width: 45%;
+     padding: 2px 10px;
+   }
+
+   .form-control:focus {
+     border-color: #ccc;
+     box-shadow: 0 0 0 0.05em #ccc;
+   }
+
+   .tabelDataEmp {
+     font-family: Arial, Helvetica, sans-serif;
+     border: 1px solid;
+     width: 100%;
+   }
+
+   .table-container {
+     margin-bottom: 20px;
+   }
+
+   .tabelDataEmp td {
+     font-size: 10px;
+     padding: 4px 5px;
+   }
+
+
+   .boader-css {
+     border: 1px solid black;
+   }
+
+   .tabelDataEmp tr:nth-child(even) {
+     background-color: #f2f2f2;
+   }
+
+   /* Styles for the custom dropdown */
+   .custom-dropdown {
+     position: relative;
+     width: 100px;
+   }
+
+   .selected-option {
+     display: block;
+     padding: 2px;
+     border: 1px solid #ccc;
+     background-color: white;
+     cursor: pointer;
+   }
+
+   .options-container {
+     display: none;
+     z-index: 2;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     background-color: white;
+     border: 1px solid #ccc;
+
+   }
+
+   .Option-background {
+     padding: 5px;
+   }
+
+   /* Hover styles for the custom dropdown and options */
+   .custom-dropdown:hover .options-container {
+     display: block;
+   }
+
+   .Option-background:hover {
+     background-color: #172e45;
+     color: white;
+   }
+
+   .selected-option i {
+     font-size: 14px;
+     margin-right: 5px;
+     color: #555;
+   }
+
+
+   .thHeading th {
+     font-size: 10px;
+     padding: 5px 8px 3px;
+     font-weight: 600;
+     background-color: gainsboro;
+
+   }
+
+   .th-bottom th {
+     font-size: 10px;
+     font-weight: 400;
+     background-color: gainsboro;
+   }
+
+   .emptyTh {
+
+     background-color: white !important;
+   }
+
+
+   .save-button {
+     padding: 0px;
+     background-color: #f96332;
+     ;
+     color: #f2f2f2;
+     border: 2px;
+     border-style: outset;
+     margin-bottom: 6px;
+     width: 60px;
+   }
+
+ }
+
+
+
+ #modalSection {
+
+   .form-control {
+
+     border-color: #ccc;
+     font-size: 14px;
+
+   }
+
+   .modal-body {
+     margin-top: 8px;
+     text-align: center;
+   }
+
+   .form-control:focus {
+     border-style: outset;
+     box-shadow: 0 0 0 0.05em #ccc;
+   }
+
+   .form-label {
+     margin-bottom: 8px;
+     font-size: 19px;
+     font-weight: 400;
+   }
+
   
-  .form-control:focus {
-    
-    border-color:  #ccc; 
-    box-shadow: 0 0 0 0.05em #ccc; 
-  }
-  
-  .btn-primary {
-    background-color: #f96332;
+   .infoIcon {
+     text-align: center;
+     border: 1px solid rgb(151, 200, 216);
+     border-radius: 50%;
+     width: 86px;
+     height: 86px;
+     
+   }
+   .modal-footer{
     border: none;
+    justify-content: center;
+   }
+
+   .info {
+    display: inline-block;
+    padding: 0px 3px 3px 3px;
+    color: rgb(151, 200, 216);
+    line-height: 80px;
+    font-size: 73px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+  } 
+
+   .button-accpect {
+     padding: 0px;
+     background-color: #f96332;
+     color: #f2f2f2;
+     border: 2px;
+     border-style: outset;
+     margin-bottom: 6px;
+     width: 60px;
+   }
+
+   .button-reject {
+     padding: 0px;
+     background-color: #868e96;
+     color: #f2f2f2;
+     border: 2px;
+     border-style: outset;
+     margin-bottom: 6px;
+     width: 60px;
+   }
+
+.wrapper{
+  width: 21%;
+    max-width: 1367px;
+    margin: 16px auto;
+}
+ }
+
+
+
+ #modalforQuerysection{
+
+
+  .form-control {
+
+    border-color: #ccc;
+    font-size: 14px;
+
   }
-.img-color{
-    background-color: white;
-    
-}
-.img-widht{
-    width: 32px;
-}
 
-}
+  .modal-body {
+    text-align: center;
+    margin-top: 8px;
 
-  #tabelData {
-    width: 90%;
-    margin: 0px auto;
-}
-#tabelData{
+  }
+  .modal-footer{
+    border: none;
+    justify-content: center;
+   }
+  .form-control:focus {
+    border-style: outset;
+    box-shadow: 0 0 0 0.05em #ccc;
+  }
 
-.form-control{
-  border-style: outset;
-}
-
-.form-control:focus {
-  border-color:  #ccc; 
-  box-shadow: 0 0 0 0.05em #ccc; 
-}
-.tabelDataEmp {
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid ;
-    width: 100%;
-}
-
-.table-container {
-    margin-bottom: 20px;
-}
-
-.tabelDataEmp td {
-    font-size: 16px;
-}
-
-
-.boader-css {
-    border: 1px solid black;
-}
-
-.tabelDataEmp tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-/* Styles for the custom dropdown */
-.custom-dropdown {
-  position: relative;
-  width: 150px;
-}
-
-.selected-option {
-  display: block;
-  padding: 5px;
-  border: 1px solid #ccc;
-  background-color: white;
-  cursor: pointer;
-}
-
-.options-container {
-  display: none;
-  z-index: 2;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
-}
-
-.Option-background {
-  padding: 5px;
-}
-
-/* Hover styles for the custom dropdown and options */
-.custom-dropdown:hover .options-container {
-  display: block;
-}
-
-.Option-background:hover {
-  background-color:#172e45;
-  color: white;
-}
-
-/* .Option-background option:checked {
-  background-color:#ddd;
-} */
-
-
-
-/* .Option-background {
-  font-size: 16px;
-  padding: 5px;
-  border: 1px solid #ccc; 
-  border-style:  outset;
-  background-color: white; 
-}
-
-.Option-background:hover  */
-
-  /* .Option-background option:hover {
-    background-color: #f96332;
-    color: white;
-} */
-.thHeading th {
-    padding: 6px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: 600;
-    background-color: gainsboro;
-   
-}
-
-.th-bottom th{
-    font-size: 15px;
+  .form-label {
+    margin-bottom: 8px;
+    font-size: 19px;
     font-weight: 400;
-    background-color: gainsboro;
+  }
+
+ 
+  .infoIcon {
+    text-align: center;
+    border: 1px solid rgb(151, 200, 216);
+    border-radius: 50%;
+    width: 86px;
+    height: 86px;
+    
+  }
+
+  .info {
+    line-height: 80px;
+   display: inline-block;
+   padding: 0px 3px 3px 3px;
+   color: rgb(151, 200, 216);
+   font-size: 73px;
+   border-radius: 50%;
+   font-weight: bold;
+   text-align: center;
+ } 
+
+  .button-accpect {
+    padding: 0px;
+    background-color: #f96332;
+    color: #f2f2f2;
+    border: 2px;
+    border-style: outset;
+    margin-bottom: 6px;
+    width: 60px;
+  }
+
+  .button-reject {
+    padding: 0px;
+    /* background-color: #f96332; */
+    color: #f2f2f2;
+    border: 2px;
+    border-style: outset;
+    margin-bottom: 6px;
+    width: 60px;
+  }
+
+.wrapper{
+ width: 21%;
+   max-width: 1367px;
+   margin: 16px auto;
 }
 
-.emptyTh {
-    background-color: white !important;
-}
-.save-button{
-  background-color: #f96332; ;
-  color: #f2f2f2;
-  border: 2px;
-  border-style: outset;
-  margin-bottom: 6px;
-  width: 100px;
-}
+
+ }
 
 
+ #actionModalsection{
 
-.table-container , .tabelDataEmp {
-    margin-top: 20px;
+
+  .form-control {
+
+    border-color: #ccc;
+    font-size: 14px;
+
+  }
+
+  .modal-body {
+    text-align: center;
+    margin-top: 8px;
+
+  }
+  .modal-footer{
+    border: none;
+    justify-content: center;
+   }
+  .form-control:focus {
+    border-style: outset;
+    box-shadow: 0 0 0 0.05em #ccc;
+  }
+
+  .form-label {
+    margin-bottom: 8px;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+ 
+  .infoIcon {
+    text-align: center;
+    border: 1px solid rgb(151, 200, 216);
+    border-radius: 50%;
+    width: 86px;
+    height: 86px;
+    
+  }
+
+  .info {
+    line-height: 80px;
+   display: inline-block;
+   padding: 0px 3px 3px 3px;
+   color: rgb(151, 200, 216);
+   font-size: 73px;
+   border-radius: 50%;
+   font-weight: bold;
+   text-align: center;
+ } 
+ .background{
+  color: rgb(50, 163, 50) !important;
+  font-weight: 400 !important
+ }
+
+ .boaderColor{
+  border: 1px solid rgb(50, 163, 50) !important;
+ }
+
+  .button-accpect {
+    padding: 0px;
+    background-color: #f96332;
+    color: #f2f2f2;
+    border: 2px;
+    border-style: outset;
+    margin-bottom: 6px;
+    width: 60px;
+  }
+
+  .button-reject {
+    padding: 0px;
+    /* background-color: #f96332; */
+    color: #f2f2f2;
+    border: 2px;
+    border-style: outset;
+    margin-bottom: 6px;
+    width: 60px;
+  }
+
+.wrapper{
+ width: 21%;
+   max-width: 1367px;
+   margin: 16px auto;
 }
+ }
+
+ #rejectModalsection{
+
+  .form-control {
+
+    border-color: #ccc;
+    font-size: 14px;
+
+  }
+
+  .modal-body {
+    text-align: center;
+    margin-top: 8px;
+
+  }
+  .modal-footer{
+    border: none;
+    justify-content: center;
+   }
+  .form-control:focus {
+    border-style: outset;
+    box-shadow: 0 0 0 0.05em #ccc;
+  }
+
+  .form-label {
+    margin-bottom: 8px;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+ 
+  .infoIcon {
+    text-align: center;
+    border: 1px solid rgb(151, 200, 216);
+    border-radius: 50%;
+    width: 86px;
+    height: 86px;
+    
+  }
+
+  .info {
+    line-height: 80px;
+   display: inline-block;
+   padding: 0px 3px 3px 3px;
+   color: rgb(151, 200, 216);
+   font-size: 73px;
+   border-radius: 50%;
+   font-weight: bold;
+   text-align: center;
+ } 
+ .background{
+  color: rgb(211 34 34 / 66%)!important;
+  font-weight: 300 !important;
+  font-size: 50px;
+ }
+
+ .boaderColor{
+  border: 1px solid rgb(211 34 34 / 66%)!important;
+ }
+
+  .button-accpect {
+    padding: 0px;
+    background-color: #f96332;
+    color: #f2f2f2;
+    border: 2px;
+    border-style: outset;
+    margin-bottom: 6px;
+    width: 60px;
+  }
+
+  .button-reject {
+    padding: 0px;
+    /* background-color: #f96332; */
+    color: #f2f2f2;
+    border: 2px;
+    border-style: outset;
+    margin-bottom: 6px;
+    width: 60px;
+  }
+
+.wrapper{
+ width: 21%;
+   max-width: 1367px;
+   margin: 16px auto;
 }
+ }
