@@ -87,7 +87,7 @@
         </nav>
       </div>
     </header>
-    <div id="SerchPageUrl">
+   
       <section class="popular">
         <div class="wrapper">
           <div class="height">
@@ -97,9 +97,7 @@
               data-bs-ride="carousel"
             >
               <div class="carousel-inner">
-                <!-- <div class="carousel-item active">
-            <img class="d-block w-100"  >
-          </div> -->
+                
               </div>
             </div>
           </div>
@@ -123,10 +121,17 @@
             >
               Search
             </button>
+            <button
+          onclick="remove()"
+            class="btn"
+            type="button"
+          >
+            clear
+          </button>
           </form>
         </div>
       </section>
-
+      <div id="SerchPageUrl">
       <section class="Trending">
         <div class="wrapper">
           <h2 class="video-h1">Trending</h2>
@@ -136,91 +141,11 @@
     </div>
 
     <div id="SerchNewspageUrl">
-      <section class="searchBar">
+
+      <section class="searchResults">
         <div class="wrapper">
-          <form id="searchValue" class="d-flex" role="search">
-            <div class="d-flesed">
-              <!-- <input
-                id="searchInputNew"
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              /> -->
-              <div  class="form-control me-2" id ="searchInputNew"> </div>
-            </div>
-            <!-- <button
-              onclick="search()"
-              class="btn btn-outline-success"
-              type="button"
-            >
-              Search
-            </button> -->
-          </form>
-        </div>
-      </section>
-
-      <section id="searchResults">
-        <div class="wrapper">
-          <h4>Search Results</h4>
-
-          <div class="tab">
-            <button class="tablinks" onclick="openTabs(event, 'Movies')">
-              Movies
-            </button>
-            <button class="tablinks" onclick="openTabs(event, 'TvShow')">
-              Tv Show
-            </button>
-            <button class="tablinks" onclick="openTabs(event, 'People')">
-              People
-            </button>
-            <button class="tablinks" onclick="openTabs(event, 'collection')">
-              collection
-            </button>
-            <button class="tablinks" onclick="openTabs(event, 'company')">
-              company
-            </button>
-            <button class="tablinks" onclick="openTabs(event, 'keyword')">
-              keyword
-            </button>
-            <button class="tablinks" onclick="openTabs(event, 'network')">
-              network
-            </button>
-          </div>
-
-          <div id="Movies" class="tabcontent">
-            <div id="datausing"></div>
-          </div>
-
-          <div id="TvShow" class="tabcontent">
-            <div id="dataTvShow">
-            
-            </div>
-          </div>
-
-          <div id="People" class="tabcontent">
-            <div id="dataPeople"></div>
-         
-          </div>
-
-          <div id="collection" class="tabcontent">
-            <div id="datacollection"></div>
-         
-          </div>
-
-          <div id="company" class="tabcontent">
-            <div id="datacompany">
-            
-            </div>
-          </div>
-
-          <div id="keyword" class="tabcontent">
-            <div id="datausingkeyword"></div>
-          
-          </div>
-          <div id="network" class="tabcontent">
-            <div id="dataNetwork"></div>
-            
+          <h2 class="video-h1">Search Item</h2>
+          <div class="video" id="searchResultsMovies">
           </div>
         </div>
       </section>
